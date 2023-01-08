@@ -1,7 +1,9 @@
 WORDLIST
 
 A class that allows the user to create a list of words and choose a random word from that list. It has two fields: a List called words that will hold the list of words and a Random object called random that will generate a random number. The class has a constructor that initializes these two fields by creating a new ArrayList for the words and a new Random object for the random field. It also has two methods: addWord and getRandomWord. The addWord method allows the user to add a new word to the list of words. The getRandomWord method generates a random number using the random object and uses it as an index to get a random word from the list of words.
+
 GAME
+
 Defining an abstract class called Game which represents a game that consists of guessing a word. The class has three abstract methods: getWordWithBlanks, isWon, and isLost. It also has a constructor that takes in a word and the number of lives as arguments and initializes the word, lives, and lettersGuessed fields. The lettersGuessed field is a list that stores the letters that have been guessed so far.
 The guessLetter method takes in a letter as an argument and returns a boolean value indicating whether the guess was correct or not. If the letter has already been guessed, it returns false. Otherwise, it adds the letter to the lettersGuessed list and checks if the letter is present in the word. If it is, it returns true, otherwise it decrements the number of lives and returns false.
 
