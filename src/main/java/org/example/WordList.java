@@ -11,7 +11,7 @@ public class WordList {
 
     // Constructor to initialize the fields
     public WordList() {
-        words = new ArrayList<String>();
+        words = new ArrayList<>();
         random = new Random();
     }
 
@@ -27,5 +27,5 @@ public class WordList {
         // Return the word at the randomly generated index
         return words.get(index);
     }
-}
 
+}
