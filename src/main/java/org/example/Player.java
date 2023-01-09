@@ -2,29 +2,35 @@ package org.example;
 import java.util.Scanner;
 
 public class Player {
-
     private Scanner scanner;
 
     public Player() {
         scanner = new Scanner(System.in);
     }
 
+    public String getName() {
+        System.out.print("Enter your name: ");
+        return scanner.nextLine();
+    }
+
     public char getGuess() {
-        // Ask player for input
         System.out.print("Enter a letter: ");
-
-        // Get the player's input as a string
         String input = scanner.nextLine();
-
-        // Returning the first character as a char
         return input.charAt(0);
     }
 
-    public void printMessage(String message) {
-        System.out.println(message);
-
-
+    public boolean wantsToPlayAgain() {
+        while (true) {
+            System.out.print("Do you want to play again? (Y/N) ");
+            String input = scanner.nextLine().toUpperCase();
+            if (input.equals("Y")) {
+                return true;
+            } else if (input.equals("N")) {
+                return false;
+            } else {
+                System.out.println("Invalid input. Please enter Y or N.");
+            }
+        }
     }
-
 
 }
