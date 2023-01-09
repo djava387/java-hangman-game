@@ -2,10 +2,9 @@ package org.example;
 
 public class Hangman extends Game {
     public Hangman(String word, int lives) {
-        // Call the superclass's constructor with the word and lives parameters
+// Call the superclass's constructor with the word and lives parameters
         super(word, lives);
     }
-
 
     public String getWordWithBlanks() {
         // Initialize a char array with the same length as the word and fill it with underscores
@@ -20,7 +19,6 @@ public class Hangman extends Game {
                 wordArray[i] = word.charAt(i);
             }
         }
-
         // Return the word with blanks as a string
         return new String(wordArray);
     }
@@ -39,4 +37,5 @@ public class Hangman extends Game {
         // Return whether the number of lives remaining is 0
         return lives == 0;
     }
+
 }
